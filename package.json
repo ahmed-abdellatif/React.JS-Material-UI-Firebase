@@ -27,11 +27,11 @@
   "devDependencies": {
     "gh-pages": "^1.2.0"
   },
-  "description": ":globe_with_meridians: https://ahmed-abdellatif.github.io/react.js-material/",
+  "description": ":globe_with_meridians: https://ahmed-abdellatif.github.io/material-ui-template.cyan/",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ahmed-abdellatif/react.js-material.git"
+    "url": "git+https://github.com/ahmed-abdellatif/material-ui-template.cyan.git"
   },
   "keywords": [
     "reactjs",
@@ -40,6 +40,6 @@
   "author": "ahmed abdellatif",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ahmed-abdellatif/react.js-material/issues"
+    "url": "https://github.com/ahmed-abdellatif/material-ui-template.cyan/issues"
   }
 }
