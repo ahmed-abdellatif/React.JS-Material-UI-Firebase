@@ -1,6 +1,6 @@
 # :octocat: Material UI Template => Uses Temporary Drawer *WILL UPDATE*
 
-:globe_with_meridians: https://ahmed-abdellatif.github.io/react.js-material/ :globe_with_meridians:
+:globe_with_meridians: https://ahmed-abdellatif.github.io/material-ui-template.cyan/ :globe_with_meridians:
 
 
 ## What's this Project about? :squirrel:
@@ -54,7 +54,7 @@ entry-point of your app in order for it to render properly
 :octocat:
 
 ```
-git clone https://github.com/ahmed-abdellatif/material-ui-react-router.git
+git clone https://ahmed-abdellatif.github.io/material-ui-template.cyan.git
 cd material-ui-react-router
 npm install
 npm start
