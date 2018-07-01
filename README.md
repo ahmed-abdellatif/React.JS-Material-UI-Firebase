@@ -8,16 +8,9 @@ This is a template which includes different material ui front-end page component
 
 This should assist in scaffolding the design process and allow developers to focus on backend functionality.
 
-## This is the Material UI Homepage. It routes to 3 pages total, using React Router.(Home page, Editor page, Topic page)
+## This is the Material UI Homepage.
 <p align="center">
-  <img height="350" src="" /></p>
-
-
-## This is the Drawer Component
-<p align="center">
-   <img height="300" src="" />
- </p>
-
+  <img height="350" src="https://github.com/ahmed-abdellatif/material-ui-template-react-starter/blob/master/material-ui-template-home.png" /></p>
 
 ## Would you Like to learn more about The Material-UI Project?
 Visit them on their home website at: https://material-ui.com/ :bookmark:
