@@ -1,6 +1,6 @@
 import React from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import cyan from '@material-ui/core/colors/cyan';
+import red from '@material-ui/core/colors/red';
 import grey from '@material-ui/core/colors/grey';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
@@ -9,9 +9,9 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 const theme = createMuiTheme({
   palette: {
     primary: {
-      light: cyan[300],
-      main: cyan[400],
-      dark: cyan[500],
+      light: red[300],
+      main: red[400],
+      dark: red[500],
     },
     secondary: {
       light: grey[50],

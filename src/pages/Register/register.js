@@ -1,66 +1,185 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import FormControl from '@material-ui/core/FormControl';
-import TextField from '@material-ui/core/TextField';
-import Grid from '@material-ui/core/Grid';
-import AccountCircle from '@material-ui/icons/AccountCircle';
+import Button from '@material-ui/core/Button';
+import HighlightIcon from '@material-ui/icons/Highlight';
+import SimpleCard from '../components/SimpleCard';
 import withRoot from '../../withRoot';
-
+import Collapse from '@material-ui/core/Collapse';
+import Paper from '@material-ui/core/Paper';
+import Switch from '@material-ui/core/Switch';
+import InputWithIcon from '../components/InputWithIcon';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import 'typeface-roboto';
+import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
-  margin: {
-    margin: theme.spacing.unit,
+  root: {
+      flex: '1 0 100%',
+    },
+    container: {
+   display: 'flex',
+ },
+ paper: {
+   margin: theme.spacing.unit,
+     textAlign: 'center',
+ },
+    hero: {
+      minHeight: '80vh',
+      flex: '0 0 auto',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: theme.palette.background.paper,
+      color: theme.palette.type === 'light' ? theme.palette.primary.dark : theme.palette.primary.main,
+    },
+    text: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    title: {
+      letterSpacing: '.3rem',
+      textIndent: '.3rem',
+      flexDirection: 'column',
+      fontWeight: theme.typography.fontWeightLight,
+      marginBottom: theme.spacing.unit,
+      [theme.breakpoints.only('xs')]: {
+        fontSize: 28,
+      },
+      whiteSpace: 'nowrap',
+    },
+    headline: {
+      paddingLeft: theme.spacing.unit * 4,
+      paddingRight: theme.spacing.unit * 4,
+      fontWeight: theme.typography.fontWeightLight,
+      marginTop: theme.spacing.unit ,
+      letterSpacing: '.1rem',
+      maxWidth: 500,
+      textAlign: 'center',
+    },
+    content: {
+      paddingBottom: theme.spacing.unit * 8,
+      paddingTop: theme.spacing.unit * 8,
+      [theme.breakpoints.up('sm')]: {
+        paddingTop: theme.spacing.unit * 12,
+      },
+    },
+    button: {
+      margin: `${theme.spacing.unit * 3}px 0 ${theme.spacing.unit * 4}px`,
+        textAlign: 'center',
+    },
+    steps: {
+      maxWidth: theme.spacing.unit * 130,
+      margin: 'auto',
+    },
+    step: {
+      padding: `${theme.spacing.unit * 3}px ${theme.spacing.unit * 2}px`,
+    },
+    stepIcon: {
+      marginBottom: theme.spacing.unit,
+    },
+    markdownElement: {},
+
+  //{/* card component style class */}
+  containCard: {
+    margin: `${theme.spacing.unit * 3}px 0 ${theme.spacing.unit * 4}px`,
   },
+  leftIcon: {
+    marginRight: theme.spacing.unit,
+  },
+  rightIcon: {
+    marginLeft: theme.spacing.unit,
+    marginBottom: theme.spacing.unit,
+  },
+  iconSmall: {
+    fontSize: 20,
+  },
+  labelStyle: {
+  fontSize: 24,
+  },
+  iOSBar: {
+   borderRadius: 13,
+   width: 42,
+   height: 26,
+   marginTop: -13,
+   marginLeft: -21,
+   border: 'solid 1px',
+   borderColor: theme.palette.grey[400],
+   backgroundColor: theme.palette.grey[50],
+   opacity: 1,
+   transition: theme.transitions.create(['background-color', 'border']),
+ },
+ iOSIcon: {
+   width: 24,
+   height: 24,
+ },
+ iOSIconChecked: {
+   boxShadow: theme.shadows[1],
+ },
 });
 
 class Register extends React.Component {
+  state = {
+    open: false,
+  };
+
+  handleClose = () => {
+    this.setState({
+      open: false,
+    });
+  };
+
+  handleClick = () => {
+    this.setState({
+      open: true,
+    });
+  };
 
   render() {
-    const classes = this.props.classes;
+    const { classes } = this.props;
+    const { open } = this.state;
+    return (
+      <div className={classes.root}>
+        <div className={classes.hero}>
+          <div className={classes.content}>
+            <div className={classes.text}>
 
-  return (
-    <div>
-      <FormControl className={classes.margin}>
-        <InputLabel htmlFor="input-with-icon-adornment">With a start adornment</InputLabel>
-        <Input
-          id="input-with-icon-adornment"
-          startAdornment={
-            <InputAdornment position="start">
-              <AccountCircle />
-            </InputAdornment>
-          }
-        />
-      </FormControl>
-      <TextField
-        className={classes.margin}
-        id="input-with-icon-textfield"
-        label="TextField"
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <AccountCircle />
-            </InputAdornment>
-          ),
-        }}
-      />
-      <div className={classes.margin}>
-        <Grid container spacing={8} alignItems="flex-end">
-          <Grid item>
-            <AccountCircle />
-          </Grid>
-          <Grid item>
-            <TextField id="input-with-icon-grid" label="With a grid" />
-          </Grid>
-        </Grid>
+            <Typography
+              variant="display3"
+              align="center"
+              component="h2"
+              color="primary"
+              gutterBottom
+              className={classes.title}
+            >
+              {'User Registration'}
+            </Typography>
+
+            <Typography
+              variant="headline"
+              component="h2"
+              color="primary"
+              gutterBottom
+              className={classes.headline}
+            >
+              {"Simple and Fast! (We're Glad to Have you!)"}
+            </Typography>
+<br />
+<br />
+      <InputWithIcon />
       </div>
-    </div>
-  );
- }
+      </div>
+
+      </div>
+
+      </div>
+
+    );
+  }
 }
+
 
 Register.propTypes = {
   classes: PropTypes.object.isRequired,

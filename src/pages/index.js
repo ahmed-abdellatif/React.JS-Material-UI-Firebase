@@ -13,10 +13,10 @@ import ButtonAppBar from './components/ButtonAppBar';
 
 import withRoot from '../withRoot';
 
-const styles = theme => ({
+  const styles = theme => ({
   root: {
-    //textAlign: 'center',
-    //paddingTop: theme.spacing.unit * 20,
+  flex: 1,
+  margin: theme.spacing.unit * 8,
   },
 });
 
@@ -43,6 +43,7 @@ class Index extends React.Component {
 
     return (
       <div className={classes.root}>
+      {/* this can be found in 'components/TemporaryDrawer.js' */}
       <TemporaryDrawer />
       </div>
     );

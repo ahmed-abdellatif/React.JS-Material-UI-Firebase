@@ -29,13 +29,11 @@ const drawerWidth = 240;
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    width: '100%',
-    maxWidth: 360,
     backgroundColor: theme.palette.background.paper,
   },
   flexAppBar: {
     flex: 1,
-    margin: theme.spacing.unit,
+  //  margin: theme.spacing.unit,
   },
   flexSideNav: {
     flex: 1,
@@ -52,27 +50,28 @@ const styles = theme => ({
   list: {
     width: 250,
   },
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20,
+  },
   button: {
-     margin: theme.spacing.unit,
-     textAlign: 'center',
-     position: 'relative',
-     //overflow: 'hidden',
+    display: 'flex',
    },
-
 });
 
 //{/* declare pathways */}
 const HomeLink = props => <Link to="/home" {...props} />
 const AboutLink = props => <Link to="/about" {...props} />
 const TopicsLink = props => <Link to="/topics" {...props} />
+const RegisterLink = props => <Link to="/register" {...props} />
+const LoginLink = props => <Link to="/login" {...props} />
+
+
 
 {/* Begin Class */}
 class TemporaryDrawer extends React.Component {
   state = {
-    top: false,
     left: false,
-    bottom: false,
-    right: false,
   };
 
   toggleDrawer = (side, open) => () => {
@@ -80,21 +79,22 @@ class TemporaryDrawer extends React.Component {
       [side]: open,
     });
   };
-// {/* break for render */}
-  render() {
+/***********************************************************
+ ***                SideNav begins                       ***
+***********************************************************/
+     render() {
     const { classes } = this.props;
 
     const sideList = (
       <div className={classes.list}>
-{/*-- side drawer begin */}
       <br/>
+{/*-- side drawer title */}
       <Typography variant="title" color="primary" className={classes.flexSideNav}>
         UI
       </Typography>
-      <Divider />
-
       <div className={classes.root}>
       <List component="nav">
+      <Divider />
 {/* Home Link */}
         <ListItem button component={HomeLink} color="primary"  aria-label="Home">
           <ListItemText primary="Home" />
@@ -109,15 +109,33 @@ class TemporaryDrawer extends React.Component {
        <ListItem button component={TopicsLink} color="primary" aria-label="Topics">
         <ListItemText primary="Topics" />
        </ListItem>
+       <Divider />
+
+{/* Register Link */}
+       <ListItem button component={RegisterLink} color="primary" aria-label="Register">
+         <ListItemText primary="Register" />
+       </ListItem>
+         <Divider />
+
+         {/* Login Link */}
+                <ListItem button component={LoginLink} color="primary" aria-label="Login">
+                  <ListItemText primary="Login" />
+                </ListItem>
+                  <Divider />
+
      </List>
     </div>
   </div>
     );
-{/* break for return */}
+
+
+/***********************************************************
+ ***                     AppBar begins                   ***
+***********************************************************/
+
   return (
       <div className={classes.root}>
-//{/* appbar begin */}
-        <AppBar>
+        <AppBar position="absolute">
           <Toolbar>
             <IconButton color="secondary" className={classes.button} onClick={this.toggleDrawer('left', true)}>
               <MenuIcon />
@@ -139,8 +157,17 @@ class TemporaryDrawer extends React.Component {
               <Button component={TopicsLink} color="secondary" className={classes.button} aria-label="Topics">
                 Topics
               </Button>
+{/*------- Register Link */}
+              <Button component={RegisterLink} color="secondary" className={classes.button} aria-label="Register">
+                Register
+              </Button>
+{/*------- Login Link */}
+             <Button component={LoginLink} color="secondary" className={classes.button} aria-label="Login">
+                  Login
+              </Button>
           </Toolbar>
         </AppBar>
+
 
         <Drawer open={this.state.left} onClose={this.toggleDrawer('left', false)}>
           <div

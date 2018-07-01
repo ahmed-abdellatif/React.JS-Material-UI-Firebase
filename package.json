@@ -1,7 +1,7 @@
 {
-  "name": "react.js-material",
+  "name": "material-ui-template-react-starter",
   "version": "1.0.0",
-  "homepage": "https://ahmed-abdellatif.github.io/material-ui-template.cyan/",
+  "homepage": "https://ahmed-abdellatif.github.io/material-ui-template-react-starter/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^1.3.0",
@@ -27,19 +27,19 @@
   "devDependencies": {
     "gh-pages": "^1.2.0"
   },
-  "description": ":globe_with_meridians: https://ahmed-abdellatif.github.io/material-ui-template.cyan/",
+  "description": ":globe_with_meridians: https://ahmed-abdellatif.github.io/material-ui-template-react-starter/",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ahmed-abdellatif/material-ui-template.cyan.git"
+    "url": "git+https://ahmed-abdellatif.github.io/material-ui-template-react-starter.git"
   },
   "keywords": [
     "reactjs",
     "material-ui"
   ],
   "author": "ahmed abdellatif",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ahmed-abdellatif/material-ui-template.cyan/issues"
+    "url": "https://ahmed-abdellatif.github.io/material-ui-template-react-starter/issues"
   }
 }
