@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Index from './pages/index';
-import Home from './pages/Home/home';
-import About from './pages/About/about';
-import Topics from './pages/Topics/topics';
-import Register from './pages/Register/register';
-import Login from './pages/Login/login';
+import Index from './view/index';
+import Home from './view/Home/home';
+import About from './view/About/about';
+import Topics from './view/Topics/topics';
+import Register from './view/Register/register';
+import Login from './view/Login/login';
+import { BrowserRouter } from 'react-router-dom'
 
 
 
@@ -17,7 +18,7 @@ import {BrowserRouter as Router, Route, Switch, Redirect,
 
 
 ReactDOM.render(
-  <Router>
+  <BrowserRouter>
     <div>
       <Index />
       <Redirect to="/home" />
@@ -30,4 +31,4 @@ ReactDOM.render(
 
    </Switch>
     </div>
-  </Router>,document.querySelector('#root'));
+  </BrowserRouter>,document.querySelector('#root'));
