@@ -8,7 +8,9 @@ import withRoot from '../../withRoot';
 import Collapse from '@material-ui/core/Collapse';
 import Paper from '@material-ui/core/Paper';
 import Switch from '@material-ui/core/Switch';
-import InputWithIcon from '../components/InputWithIcon';
+import RegisterWithIcon from '../components/RegisterWithIcon';
+import RegistrationPaper from '../components/RegistrationPaper';
+
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import 'typeface-roboto';
 import Typography from '@material-ui/core/Typography';
@@ -168,7 +170,8 @@ class Register extends React.Component {
             </Typography>
 <br />
 <br />
-      <InputWithIcon />
+     
+      <RegisterWithIcon />
       </div>
       </div>
 

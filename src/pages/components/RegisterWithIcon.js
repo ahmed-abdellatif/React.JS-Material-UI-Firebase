@@ -8,28 +8,41 @@ import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import Paper from '@material-ui/core/Paper';
 
 const styles = theme => ({
   root: {
-    display: 'block',
-    flexWrap: 'wrap',
+    display: 'flex',
+   flexWrap: 'wrap',
+   justifyContent: 'space-around',
+    ...theme.mixins.gutters(),
+    paddingTop: theme.spacing.unit * 3,
+    paddingBottom: theme.spacing.unit * 3,
+    overflow: 'hidden',
   },
-  margin: {
-    margin: theme.spacing.unit,
+  formControl: {
+    margin: theme.spacing.unit * 3,
+    minWidth: 250,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  textField: {
-  flexBasis: 200,
-},
+  alignment: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    maxWidth: '500px',
+  }
 });
 
-function InputWithIcon(props) {
+function RegisterWithIcon(props) {
   const { classes } = props;
 
   return (
 
       <div className={classes.root}>
-
-      <FormControl className={classes.margin}>
+     <Paper className={classes.root} elevation={5}>
+     <div className={classes.alignment}>
+      <FormControl className={classes.formControl}>
         <InputLabel htmlFor="input-with-icon-adornment">First Name</InputLabel>
         <Input
           id="input-with-icon-adornment"
@@ -41,22 +54,21 @@ function InputWithIcon(props) {
         />
       </FormControl>
 
-
-      <TextField
-        className={classes.margin}
-        id="last-name"
-        label="Last Name"
-        InputProps={{
-          startAdornment: (
+      <FormControl className={classes.formControl}>
+        <InputLabel htmlFor="input-with-icon-adornment">Last Name</InputLabel>
+        <Input
+          id="input-with-icon-adornment"
+          startAdornment={
             <InputAdornment position="start">
               <AccountCircle />
             </InputAdornment>
-          ),
-        }}
-      />
+          }
+        />
+      </FormControl>
 
 
-      <FormControl className={classes.margin}>
+
+      <FormControl className={classes.formControl}>
         <InputLabel htmlFor="input-with-icon-adornment">Email</InputLabel>
         <Input
           id="email"
@@ -68,24 +80,25 @@ function InputWithIcon(props) {
         />
       </FormControl>
 
-      <TextField
-        className={classes.margin}
-        id="super-secret"
-        label="Super Secret"
-        InputProps={{
-          startAdornment: (
+      <FormControl className={classes.formControl}>
+        <InputLabel htmlFor="input-with-icon-adornment">Password</InputLabel>
+        <Input
+          id="input-with-icon-adornment"
+          startAdornment={
             <InputAdornment position="start">
               <AccountCircle />
             </InputAdornment>
-          ),
-        }}
-      />
+          }
+        />
+      </FormControl>
+      </div>
+      </Paper>
     </div>
   );
 }
 
-InputWithIcon.propTypes = {
+RegisterWithIcon.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(InputWithIcon);
+export default withStyles(styles)(RegisterWithIcon);
