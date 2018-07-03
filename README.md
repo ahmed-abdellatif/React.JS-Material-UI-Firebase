@@ -1,6 +1,6 @@
 ## :octocat: **Material UI Component Starter Templates for ReactJS ** - In Progress
 
-:globe_with_meridians: https://ahmed-abdellatif.github.io/material-ui-template-react-starter :globe_with_meridians:
+:globe_with_meridians: https://ahmed-abdellatif.github.io/reactjs-material-ui :globe_with_meridians:
 
 
 ## What's this Project about? :squirrel:
@@ -46,7 +46,7 @@ entry-point of your app in order for it to render properly
 :octocat:
 
 ```
-git clone https://ahmed-abdellatif.github.io/material-ui-template.react-starter
+git clone https://ahmed-abdellatif.github.io/reactjs-material-ui.git
 cd material-ui-react-router
 npm install
 npm start
